@@ -1,0 +1,42 @@
+select * from m_user_profile;
+select * from m_rank;
+
+create table m_user_profile(
+seq_no INT PRIMARY KEY NOT NULL,
+login_id varchar NOT null,
+pswd varchar NOT null,
+user_name varchar NOT null,
+user_age varchar NOT null,
+user_rank varchar ,
+kill_death_ratio varchar ,
+matches_played varchar ,
+matches_won varchar ,
+total_headshots varchar ,
+highest_kill varchar ,
+Accuracy varchar ,
+is_in_clan varchar,
+score varchar 
+);
+
+create table m_rank(
+seq_no INT PRIMARY KEY NOT NULL,
+user_rank varchar NOT null,
+low_score INT not NULL,
+high_score INT not NULL
+);
+
+INSERT INTO public.m_rank
+(seq_no, user_rank, low_score, high_score)
+VALUES(1, 'Level 1', 0, 9);
+INSERT INTO public.m_rank
+(seq_no, user_rank, low_score, high_score)
+VALUES(2, 'Level 2', 10, 19);
+INSERT INTO public.m_rank
+(seq_no, user_rank, low_score, high_score)
+VALUES(3, 'Level 3', 20, 29);
+INSERT INTO public.m_rank
+(seq_no, user_rank, low_score, high_score)
+VALUES(4, 'Level 4', 30, 39);
+INSERT INTO public.m_rank
+(seq_no, user_rank, low_score, high_score)
+VALUES(5, 'Level 5', 40, 49);
